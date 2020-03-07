@@ -1,0 +1,29 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBooks.App", "MyBooks.App\MyBooks.App.csproj", "{EB0CB7EC-57FD-43E4-83DA-66EC075588ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBooks.Model", "MyBooks.Model\MyBooks.Model.csproj", "{8E19F5AE-B97D-4247-910B-686BFC498F08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBooks.DataService", "MyBooks.DataService\MyBooks.DataService.csproj", "{60C0B504-F107-4830-B7F8-E4C470D8D9AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB0CB7EC-57FD-43E4-83DA-66EC075588ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB0CB7EC-57FD-43E4-83DA-66EC075588ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB0CB7EC-57FD-43E4-83DA-66EC075588ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB0CB7EC-57FD-43E4-83DA-66EC075588ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E19F5AE-B97D-4247-910B-686BFC498F08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E19F5AE-B97D-4247-910B-686BFC498F08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E19F5AE-B97D-4247-910B-686BFC498F08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E19F5AE-B97D-4247-910B-686BFC498F08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60C0B504-F107-4830-B7F8-E4C470D8D9AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60C0B504-F107-4830-B7F8-E4C470D8D9AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60C0B504-F107-4830-B7F8-E4C470D8D9AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60C0B504-F107-4830-B7F8-E4C470D8D9AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
