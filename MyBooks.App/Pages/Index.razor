@@ -1,0 +1,66 @@
+﻿@page "/"
+@using MyBooks.Model
+@using MyBooks.DataService
+@inject IDataService  DataService
+
+    <form method="post">
+        <div class="form-group row">
+            <label asp-for="Name" class="control-label">Name</label>
+            <input asp-for="Name" class="form-control" @bind="@book.Name" />
+        </div>
+        <div class="form-group row">
+            <label asp-for="Description" class="control-label">Description</label>
+            <input asp-for="Description" class="form-control" @bind="@book.Description" />
+        </div>
+
+        <div class="form-group row">
+            <a @onclick="@(async () => await OnCreateAsync())" class="btn btn-primary text-white">Save</a>
+        </div>
+    </form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in books)
+        {
+            <tr>
+               <td>@item.Name</td>
+                <td>@item.Description</td>
+                <td>
+                    <a class="btn btn-primary"  >Edit</a>
+                    &nbsp;
+                    <a class="btn btn-danger" @onclick="@(async () => await OnDeleteAsync(@item.Id))">X</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+@functions {
+    Book book = new Book();
+    private ICollection<Book> books;
+
+    protected override async Task OnInitializedAsync()
+    {
+        books = await DataService.GetAllBooks();
+    }
+
+    async Task OnCreateAsync()
+    {
+        await DataService.AddAsync(book);
+        book = new Book();
+        await OnInitializedAsync();
+    }
+    async Task OnDeleteAsync(int id)
+    {
+        await DataService.DeleteAsync(id);
+        await OnInitializedAsync();
+    }
+}
